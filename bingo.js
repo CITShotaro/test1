@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => 
     const bingoCard = document.getElementById('bingo-card');
     const bingoCountElement = document.getElementById('bingo-count');
     const currentUser = JSON.parse(localStorage.getItem('currentUser')) || { username: '', bingoCount: 0 };
