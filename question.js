@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', async () => 
     const questionText = document.getElementById('question-text');
     const optionsContainer = document.getElementById('options');
     const feedback = document.getElementById('feedback');
