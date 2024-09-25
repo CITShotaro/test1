@@ -93,6 +93,13 @@ button:hover {
     color: #333333;
 }
 
+/* 正解済みのマスのスタイル */
+.correct-cell {
+    background-color: #c8e6c9; /* 緑色の背景 */
+    border: 2px solid #66bb6a; /* 緑色の枠線 */
+}
+
+
 #question-area {
     margin-bottom: 20px;
 }
