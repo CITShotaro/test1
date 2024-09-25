@@ -88,17 +88,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     const completeQuestions = () => {
         if (correctAnswers === totalQuestions) {
             alert('3問全て正解です！このマスの色が変わります。');
-            updateBingoCellState(cellIndex);
+            updateBingoCellState(cellIndex); // 正解したマスの状態を更新
         } else {
             alert('終了です。結果によりマスの色は変わりません。');
         }
-        window.location.href = 'bingo.html';
+        window.location.href = 'bingo.html'; // BINGO画面に戻る
     };
 
     const updateBingoCellState = (index) => {
+        // BINGOカードの状態を更新する
         const bingoState = JSON.parse(localStorage.getItem('bingoState')) || Array(25).fill(false);
-        bingoState[index] = true;
-        localStorage.setItem('bingoState', JSON.stringify(bingoState));
+        bingoState[index] = true; // 正解マスを更新
+        localStorage.setItem('bingoState', JSON.stringify(bingoState)); // 状態を保存
     };
 
     nextQuestionButton.addEventListener('click', () => {
@@ -115,3 +116,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     loadQuestion(currentQuestionIndex);
     nextQuestionButton.disabled = true;
 });
+
